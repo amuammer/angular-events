@@ -7,7 +7,8 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-12">
-              <h4>Add Event</h4>
+              <h4 *ngIf="isEdit">Edit Event {{state.title}}</h4>
+              <h4 *ngIf="!isEdit">Add Event</h4>
               <hr />
             </div>
           </div>
@@ -18,7 +19,8 @@
                   <label for="title" class="col-4 col-form-label">Title</label>
                   <div class="col-8">
                     <input
-                      ngModel
+                      [(ngModel)]="state.title"
+                      ngMod
                       id="title"
                       name="title"
                       placeholder="title"
@@ -37,6 +39,7 @@
                   <label for="name" class="col-4 col-form-label">Date</label>
                   <div class="col-8">
                     <input
+                    [(ngModel)]="state.date"
                       ngModel
                       id="date"
                       name="date"
@@ -53,6 +56,7 @@
                   <label for="time" class="col-4 col-form-label">Time</label>
                   <div class="col-8">
                     <input
+                    [(ngModel)]="state.time"
                       ngModel
                       id="time"
                       name="time"
@@ -70,6 +74,7 @@
                   <label for="price" class="col-4 col-form-label">Price</label>
                   <div class="col-8">
                     <input
+                    [(ngModel)]="state.price"
                       ngModel
                       id="price"
                       name="price"
@@ -92,6 +97,7 @@
                   <div class="col-8">
                     <input
                       ngModel
+                      [(ngModel)]="state.country"
                       id="country"
                       name="country"
                       placeholder="country"
@@ -110,6 +116,7 @@
                   <label for="price" class="col-4 col-form-label">City</label>
                   <div class="col-8">
                     <input
+                    [(ngModel)]="state.city"
                       ngModel
                       id="city"
                       name="city"
@@ -130,6 +137,7 @@
                   <div class="col-8">
                     <input
                       ngModel
+                      [(ngModel)]="state.address"
                       id="address"
                       name="address"
                       placeholder="address"
@@ -143,11 +151,10 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="form-group row">
                   <div class="offset-4 col-8">
                     <button name="submit" type="submit" class="btn btn-primary">
-                      Save
+                      {{isEdit ? "Update" : "Save"}}
                     </button>
                   </div>
                 </div>

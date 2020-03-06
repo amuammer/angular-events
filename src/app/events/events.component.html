@@ -3,7 +3,7 @@
   <body>
       <div class="container-fluid">
       <hr />
-      <button class="btn btn-primary float-right">Add</button>
+      <button [routerLink]="'/addevent'" class="btn btn-primary float-right">Add</button>
       <h2>Events</h2>
       <hr />
       <table class="table table-bordered">
@@ -16,14 +16,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let event of events">
+          <tr *ngFor="let event of events; index as i">
             <td>{{event.title}}</td>
             <td>{{event.date}}</td>
             <td>{{event.time}}</td>
             <td>
-              <button class="btn ">Edit</button>
+              <button [routerLink]="['/events', event.id]" class="btn ">Edit</button>
               |
-              <button class="btn ">Delete</button>
+              <button (click)="delete(event.id, i)" class="btn ">Delete</button>
             </td>
           </tr>
         </tbody>

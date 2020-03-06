@@ -15,6 +15,17 @@ export class EventsComponent implements OnInit {
     })
    }
 
+   delete(id, index){
+     const eventsOld = this.events;
+    this.http.delete(`${environment.apiUrl}/${id}`).subscribe((data: any) => {
+      eventsOld.splice(index, 1);
+      this.events = eventsOld;
+    }, (err) => {
+      console.log(err);
+      alert(err.message);
+    })
+  }
+
   ngOnInit(): void {
   }
 
