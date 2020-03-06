@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+      <div class="container-fluid">
+      <hr />
+      <button class="btn btn-primary float-right">Add</button>
+      <h2>Events</h2>
+      <hr />
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+            <td>{{event.title}}</td>
+            <td>{{event.date}}</td>
+            <td>{{event.time}}</td>
+            <td>
+              <button class="btn ">Edit</button>
+              |
+              <button class="btn ">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

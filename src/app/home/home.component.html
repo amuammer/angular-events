@@ -1,0 +1,28 @@
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 mt-3" *ngFor="let event of events">
+      <div class="card cardFix">
+        <div class="card-body">
+          <h5 class="card-title">Event: {{event.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Date: {{event.date}}</h6>
+          <div>
+            <span class="card-subtitle mb-2">Time: {{event.time}}</span>
+            <span> (Early Start)</span>
+            <span> (Late Start)</span>
+            <span> (Normal Start)</span>
+          </div>
+          <p class="card-text">Price : {{event.price}}$</p>
+          <p class="card-text">Attendance Numbers : {{event.attendence_numbers}}</p>
+          <p class="card-text">
+              Address : {{event.address}}
+          </p>
+          <p class="card-text">
+            Online URL: {{event.url}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "id": 0,
+      "title": "Gaza1",
+      "date": "2/27/2019",
+      "time": "5:00 AM",
+      "price": "80",
+      "attendence_numbers": "1000",
+      "address": "Alshuhada",
+      "url": "http://google.com"
+    },
+    {
+      "title": "adnan2",
+      "date": "2020-02-25",
+      "time": "",
+      "price": "10",
+      "country": "Pal",
+      "city": "Rafah",
+      "address": "address-1",
+      "id": 1
+    },
+    {
+      "title": "adnan3",
+      "date": "2020-03-25",
+      "time": "00:00",
+      "price": "asd",
+      "country": "asd",
+      "city": "asd",
+      "address": "asd",
+      "id": 2
+    }
+  ]
+}
